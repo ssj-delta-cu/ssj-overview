@@ -1,0 +1,11 @@
+<OGRVRTDataSource>
+ <OGRVRTWarpedLayer>
+  <OGRVRTLayer name="delta_service_area">
+    <SrcDataSource relativeToVRT="1">DeltaServiceArea_WGS84.shp</SrcDataSource>
+    <SrcLayer>DeltaServiceArea_WGS84</SrcLayer>
+    <Field name="name" src="DSA" type="STRING"/>
+    <GeometryField name="boundary"/>
+  </OGRVRTLayer>
+<TargetSRS>epsg:3310</TargetSRS>
+</OGRVRTWarpedLayer>
+</OGRVRTDataSource>
