@@ -2,7 +2,9 @@
 
 This project contains the suggested boundaries used for the ssj-delta-cu
 project summary.  This includes the delta service area boundary, as well as
-suggested rasters bounderies for input and output projectdata.
+suggested rasters boundaries for input and output project data.
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=zDpfBkZvP6Yk.kvF3ZvPShMdE" width="640" height="480"></iframe>
 
 ## Gridded data
 
@@ -29,7 +31,3 @@ For higher resolution imagery, we suggest the following potential resolutions, a
 
 For example, our landsat imagery will be delivered at 25m (cubic spline
 interpolated).  However any resoultion with an integral number of pixels in the region is acceptable.
-
-# Weather
-
-gdal_translate -projwin -400000 450000 600000 -650000 ETo.asc eto.tif
