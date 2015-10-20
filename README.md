@@ -4,6 +4,8 @@ This project contains the suggested boundaries used for the ssj-delta-cu
 project summary.  This includes the delta service area boundary, as well as
 suggested rasters boundaries for input and output project data.
 
+[Overview Map](https://www.google.com/maps/d/edit?mid=zDpfBkZvP6Yk.kvF3ZvPShMdE&usp=sharing)
+
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zDpfBkZvP6Yk.kvF3ZvPShMdE" width="640" height="480"></iframe>
 
 ## Gridded data
