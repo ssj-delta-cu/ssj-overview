@@ -23,6 +23,9 @@ shp: src/delta_service_area.vrt
 postgis: src/delta_service_area.vrt ${src}
 	${OGR} src/delta_service_area.vrt
 
+bbox.csv:
+	${PG} -c "copy (with m as (select st_xmin(boundary) as llx,st_ymin(boundary) as lly,st_xmax(boundary) as urx,st_ymax(boundary) as ury from delta_service_area) select 'bounding box' as name,st_asKML(st_setsrid(st_makebox2d(st_makepoint(floor(llx/4000)*4000,floor(lly/4000)*4000),st_makePoint(ceil(urx/4000)*4000,ceil(ury/4000)*4000)),3310)) as boundary from m) to stdout with csv header;" > $@
+
 # In order to use our PostGIS import, we include some standard
 # configuration file.  This is pulled from a specific version, as a
 # github GIST.  This, we probably don't save in our repo.  Want users
@@ -34,3 +37,5 @@ configure.mk:
 # Some convience functions for testing and repreoducing
 clean:
 	rm -rf configure.mk shp geojson
+
+# ogr2ogr -overwrite -a_srs EPSG:3310 -f "Postgresql" PG:"service=delta" large_fields.geojson -nln large_fields
