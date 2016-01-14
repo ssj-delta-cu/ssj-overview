@@ -1,0 +1,23 @@
+{
+  "name": "delta-boundaries",
+  "version": "1.0.0",
+  "description": "Sacramento San Joaquin Delta Boundaries",
+  "main": "delta-service-area.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssj-delta-cu/delta-boundaries.git"
+  },
+  "keywords": [
+    "Sacramento",
+    "San-Joaquin",
+    "Delta"
+  ],
+  "author": "Quinn Hart <qjhart@ucdavis.edu>",
+  "license": "CCM",
+  "bugs": {
+    "url": "https://github.com/ssj-delta-cu/delta-boundaries/issues"
+  }
+}
