@@ -1,5 +1,5 @@
 {
-  "name": "delta-boundaries",
+  "name": "ssj-overview",
   "version": "1.0.0",
   "description": "Sacramento San Joaquin Delta Boundaries",
   "main": "delta-service-area.json",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ssj-delta-cu/delta-boundaries.git"
+    "url": "https://github.com/ssj-delta-cu/ssj-overview.git"
   },
   "keywords": [
     "Sacramento",
