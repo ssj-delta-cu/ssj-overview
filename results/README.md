@@ -4,6 +4,10 @@ This is a template for how the results of each modeling effort should be organiz
 
 If you have multiple results, please follow this same format, but use different base directories; prefixed with ```results```, for example, the prescriptive _ET_ calculation method may include _results_cdl/_ and _results_nasa/_ directories to describe results from two different landcover maps.
 
+Note, that you are required to supply the files: ```wy2015/monthly.csv``` and
+the raster ```wy2015/monthly/ET.tif```.
+
+
 ## Daily (and Monthly) Parameters
 
 Throughout the results the following parameter names should be used.  The values
