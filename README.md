@@ -29,7 +29,7 @@ In determining the consumptive use for the Delta, several research groups have b
 ### Final Products
 
 Product | [CUPS] | [METRIC] | [ITRC-METRIC] | [NASA-TOPS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
---- |
+--- | --- | --- | --- | --- | --- | --- | ---
 _ET_ | M/D | M | M | M | M | M | M
 M=Monthly; D=Daily
 
@@ -38,7 +38,7 @@ M=Monthly; D=Daily
 
 
 Product | [CUPS] | [METRIC] | [ITRC-METRIC] | [NASA-TOPS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
---- |
+--- | --- | --- | --- | --- | --- | --- | ---
 [Weather] | D | I/D | I/D |  |  |  |
 [ETo] | D | D | I/D |  |  |  |
 _ETr_ | D | I/D | I/D |  |  |  |
@@ -59,7 +59,7 @@ Landcover: https://github.com/ssj-delta-cu/ssj-wea
 
 ### Intermediate Data
 Product | [CUPS] | [METRIC] | [ITRC-METRIC] | [NASA-TOPS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
---- |
+--- | --- | --- | --- | --- | --- | --- | ---
 _ET_ | | I | I | I | I | I | I
 _ETo_ | D/M | I | I | I | I | I | I
 _ETr_ |  | I | I |  | I | I | I
