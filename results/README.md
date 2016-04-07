@@ -17,11 +17,11 @@ in () specify the units for the parameters.  For monthly or yearly summaries, th
 
 - _ETo_ (mm/day) Reference Evapotranspiration--Short Grass.  This is the ASCE reference value for short grass.
 
-- _ETa_ (mm/day) Reference Evapotranspiration--Alfalfa.  This is the ASCE reference value for alfalfa.
+- _ETr_ (mm/day) Reference Evapotranspiration--Alfalfa.  This is the ASCE reference value for alfalfa.
 
 - _Kc_ (unitless) Crop coefficient, defined as _ET_/_ETo_.
 
-- _Kca_ (unitless) Crop coefficient (alfalfa) defined as _ET_/_ETa_.
+- _Kcr_ (unitless) Crop coefficient (alfalfa) defined as _ET_/_ETr_.
 
 - _Ts_ (C) Surface Temperature.  This is the modeled value of the actual
 surface.  For
@@ -42,7 +42,7 @@ Some satellite based products will want to report some of these values as their 
 
 - _iET_ (mm/hr)
 - _iETo_ (mm/hr)
-- _iETa_ (mm/day)
+- _iETr_ (mm/day)
 - _iTs_ (C) For a satellite overpass, this is the instantaneous temperature.
 - _iH_ (W/m^2)
 - _iG_ (W/m^2 )
