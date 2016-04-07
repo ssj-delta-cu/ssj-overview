@@ -58,6 +58,7 @@ Landcover: https://github.com/ssj-delta-cu/ssj-wea
 
 
 ### Intermediate Data
+
 Product | [CUPS] | [METRIC] | [ITRC-METRIC] | [NASA-TOPS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
 _ET_ | | I | I | I | I | I | I
@@ -68,8 +69,10 @@ _Kcr_ | | I | I | I |  |  |
 _Rn_ | | I | I | I |  |  |
 _G_ | | I | I | I |  |  |
 _H_ | | I | I | I |  |  |
+_masks_ | | I | I | I |  |  |
 where I=Instanteous; M=Monthly; D=Daily
 
+_masks_ are any masks that limit the calculation of instantaneous ET.
 
 
 ## Delta Service Area Boundaries and Associated data (boundaries)
