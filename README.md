@@ -41,7 +41,7 @@ Product | [CUPS] | [METRIC] | [ITRC-METRIC] | [NASA-TOPS] | [UCD-PT] | [JPL-PT] 
 --- | --- | --- | --- | --- | --- | --- | ---
 [Weather] | D | I/D | I/D |  |  |  |
 [ETo] | D | D | I/D |  |  |  |
-_ETr_ | D | I/D | I-D |  |  |  |
+_ETr_ | D | I/D | I/D |  |  |  |
 [Landcover] | D |  |  |  | |  |
 [Landsat8] |  | I | I | I | I  | I | I
 _MODIS_ |  |  |  |  | I  |  | I
