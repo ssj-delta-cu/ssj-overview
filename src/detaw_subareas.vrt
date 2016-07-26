@@ -1,0 +1,13 @@
+<OGRVRTDataSource>
+ <OGRVRTWarpedLayer>
+  <OGRVRTLayer name="detaw_subareas">
+    <SrcDataSource relativeToVRT="1">DETAW_Subareas_n83u10.shp</SrcDataSource>
+    <SrcLayer>DETAW_Subareas_n83u10</SrcLayer>
+    <Field name="subname" src="SUB_NAME" type="STRING"/>
+    <Field name="region" src="REGION" type="STRING"/>
+    <Field name="subarea" src="SUBAREA" type="INTEGER"/>
+    <GeometryField name="boundary"/>
+  </OGRVRTLayer>
+<TargetSRS>epsg:3310</TargetSRS>
+</OGRVRTWarpedLayer>
+</OGRVRTDataSource>

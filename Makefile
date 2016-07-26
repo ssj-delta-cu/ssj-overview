@@ -1,15 +1,23 @@
 #! /usr/bin/make -f
 
+# Alther w/ service=ssj
 include configure.mk
 
+service:=ssj-delta-cu
 schema:=public
-service=ssj-delta-cu
 src:=src/DeltaServiceArea_WGS84.shp
+
+ogrdsn:=PG:"service=${service}"
+OGR:=ogr2ogr -f "PostgreSQL" ${ogrdsn}
 
 DEFAULT: delta_service_area.geojson shp
 
 # Converting to WGS84 is a more accepted GEOJSON format.
 delta_service_area.geojson: src/delta_service_area.vrt ${src}
+	ogr2ogr -f GEOJSON  -t_srs WGS84 $@ $<
+
+# Converting to WGS84 is a more accepted GEOJSON format.
+detaw_subareas.geojson: src/detaw_subareas.vrt src/DETAW_Subareas_n83u10.shp
 	ogr2ogr -f GEOJSON  -t_srs WGS84 $@ $<
 
 # Here's an Example of materializing that VRT file, for example to
@@ -20,8 +28,9 @@ shp: src/delta_service_area.vrt
 # Additionally, we may want to show alternative import strateigies.
 # This rule will create a PostGIS version in ${schema}
 .PHONY: postgis
-postgis: src/delta_service_area.vrt ${src}
-	${OGR} src/delta_service_area.vrt
+postgis: src/delta_service_area.vrt src/detaw_subareas.vrt
+#	${OGR} src/delta_service_area.vrt
+	${OGR} -nln detaw_subareas -nlt MULTIPOLYGON src/detaw_subareas.vrt
 
 bbox.csv:
 	${PG} -c "copy (with m as (select st_xmin(boundary) as llx,st_ymin(boundary) as lly,st_xmax(boundary) as urx,st_ymax(boundary) as ury from delta_service_area) select 'bounding box' as name,st_asKML(st_setsrid(st_makebox2d(st_makepoint(floor(llx/4000)*4000,floor(lly/4000)*4000),st_makePoint(ceil(urx/4000)*4000,ceil(ury/4000)*4000)),3310)) as boundary from m) to stdout with csv header;" > $@

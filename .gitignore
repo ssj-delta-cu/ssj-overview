@@ -1,0 +1,9 @@
+*~
+src/*.shp*
+src/*.shx
+src/*.cpg
+src/*.dbf
+src/*.prj
+src/*.sbx
+src/*.sbn
+shp/
