@@ -48,3 +48,11 @@ clean:
 	rm -rf configure.mk shp geojson
 
 # ogr2ogr -overwrite -a_srs EPSG:3310 -f "Postgresql" PG:"service=delta" large_fields.geojson -nln large_fields
+
+# get legal delta bounds from catalog.data.gov
+legal:
+	wget -P src/ ftp://ftp.dfg.ca.gov/BDB/GIS/BIOS/Public_Datasets/500_599/ds586.zip
+	unzip src/ds586.zip -d src/LegalDeltaBoundary/
+	
+legal_delta.geojson: src/LegalDeltaBoundary/ds586.shp
+	ogr2ogr -f GEOJSON -t_srs WGS84 legal_delta.geojson $<
