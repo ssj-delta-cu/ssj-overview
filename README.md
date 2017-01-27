@@ -109,4 +109,27 @@ For higher resolution imagery, we suggest the following potential resolutions, a
   25 |     2240 |     4480 | 10035200
 
 For example, our landsat imagery will be delivered at 25m (cubic spline
-interpolated).  However any resoultion with an integral number of pixels in the region is acceptable.
+interpolated).  However any resolution with an integral number of pixels in the region is acceptable.
+
+
+# Uploading Final Monthly Data Products 
+
+## Format
+
+ - 12 band geotiff raster
+ - Each band representing month of the water year (Oct -> Sep)
+ - Units - average daily ET (tens of mm per day)
+
+## Git + LFS (Preferred Option)
+
+Note: Git lfs must be used when any file in the repo is > 100 mb. If everything is less than ~50 mb you can just use git to commit the files and push the changes to the appropriate repository. Git LFS is a command line extension for efficiently dealing with large files.
+
+1. [Set up Git LFS](https://git-lfs.github.com/)
+2. Configure git lfs to track files
+3. Commit and push changes to appropriate repo
+
+## Alternative option - Upload to box.com
+
+A second option if you are unable to set up git with lfs enabled is to upload the files to the project's private folder on box. Access to the upload folder is limited (@andybell, @josue-medellin, @jrmerz, @jessejanko). We will add the files to the appropriate repository.
+
+[ssj-delta-cu private folder upload](http:/ssj-delta-cu.github.io/ssj-overview/upload.html)
