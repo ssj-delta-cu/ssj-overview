@@ -30,7 +30,7 @@ In determining the consumptive use for the Delta, several research groups have b
 
 Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [DETAW] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
-_ET_ | M/D | M | M | M | M | ? | M
+_ET_ | M/D | M | M | M | M | M/D | M
 M=Monthly; D=Daily
 
 
@@ -39,14 +39,14 @@ M=Monthly; D=Daily
 
 Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [DETAW] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
-[Weather] | D | I/D | I/D |  | | ?| 
-[ETo] | D | D | I/D |  |  | ? | 
-_ETr_ | D | I/D | I/D |  |  | ? | 
-[Landcover] | D |  |  |  |  | ? | 
-[Landsat8] |  | I | I | I | I  | ? | I
-_MODIS_ |  |  |  |  | I  | ? | I
-_GOES_ |  |  |  |  |   | ? | I
-[DEM] |  | I | I | I | I | ? | I
+[Weather] | D | I/D | I/D |  | | D | 
+[ETo] | D | D | I/D |  |  |  | 
+_ETr_ | D | I/D | I/D |  |  |  | 
+[Landcover] | D |  |  |  |  | M | 
+[Landsat8] |  | I | I | I | I  |  | I
+_MODIS_ |  |  |  |  | I  |  | I
+_GOES_ |  |  |  |  |   | | I
+[DEM] |  | I | I | I | I | | I
 where M=Monthly; D=Daily
 
 [Weather]: https://github.com/ssj-delta-cu/ssj-weather
@@ -61,15 +61,15 @@ Landcover: https://github.com/ssj-delta-cu/ssj-wea
 
 Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [DETAW] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
-_ET_ | | I | I | I | I | ? | I
-_ETo_ | D/M | I | I | I | I | ? | I
-_ETr_ |  | I | I |  | I | ? | I
-_Kc_ | D/M | I | I | I | I | ? | I
-_Kcr_ | | I | I | I |  | ? |
-_Rn_ | | I | I | I |  | ? |
-_G_ | | I | I | I |  | ? |
-_H_ | | I | I | I |  | ? |
-_masks_ | | I | I | I |  | ? |
+_ET_ | | I | I | I | I | I | I
+_ETo_ | D/M | I | I | I | I | D/M | I
+_ETr_ |  | I | I |  | I |  | I
+_Kc_ | D/M | I | I | I | I | D | I
+_Kcr_ | | I | I | I |  | |
+_Rn_ | | I | I | I |  |  |
+_G_ | | I | I | I |  |  |
+_H_ | | I | I | I |  |  |
+_masks_ | | I | I | I |  |  |
 where I=Instanteous; M=Monthly; D=Daily
 
 _masks_ are any masks that limit the calculation of instantaneous ET.
