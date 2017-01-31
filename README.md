@@ -2,26 +2,25 @@
 
 In determining the consumptive use for the Delta, several research groups have been invited to estimate evapotranspiration estimates.
 
- - CUPS / [CalSIMETAW] / [DETAW]  uses the traditional crop coefficient and reference ET approach to estimate crop ET spatially over California at various timescales.  Weighted crop coefficients are used to estimate ET for up to 20 crop and 4 land-use categories.
+ - [CalSIMETAW] - Department of Water Resources [DWR], Morteza Orang): Estimates daily soil water balance to determine ETc and ETaw for use in California Water Plan Update.
+
+ - [DETAW] - DWR, Tariq Kadir: Computerized ground surface water balance model for 168 subareas within the California Delta.
 
  - [UCD-METRIC] - UCDavis, Josué Medellín-Azuara: estimates ET based on energy balance and the partition of sensible and latent heat flux using mostly Landsat satellite data; with the internal calibration of the sensible heat computation using the ground-based reference ET.
 
- - [ITRC] CalPoly, Dan Howes: modifies METRIC by using a semi-automated internal calibration and replacing the alfafa reference ET with grass reference ET.
+ - [ITRC] - CalPoly, Dan Howes: modifies METRIC by using a semi-automated internal calibration and replacing the alfafa reference ET with grass reference ET.
 
- - [SIMS] ET method (NASA Ames, Forrest Melton): utilizes the NASA Terrestrial Observation and Prediction System (TOPS) to integrate satellite observations and meteorological observations to map basal crop coefficients and evapotranspiration.
+ - [SIMS] - NASA Ames, Forrest Melton: utilizes the NASA Terrestrial Observation and Prediction System (TOPS) to integrate satellite observations and meteorological observations to map basal crop coefficients and evapotranspiration.
 
- - [UCD-PT] Priestley Taylor ET approach (UCDavis, Yufang Jin): uses the optimized semi-empirical Priestley-Taylor (PT) equations to estimate ET; net radiation, ground heat flux, and the PT coefficients are derived from MODIS and Landsat satellite data.
+ - [UCD-PT]  - UCDavis, Yufang Jin: the Priestley Taylor ET approach uses the optimized semi-empirical Priestley-Taylor (PT) equations to estimate ET; net radiation, ground heat flux, and the PT coefficients are derived from MODIS and Landsat satellite data.
 
- - [JPL-PT] ET approach (Jet Propulsion Lab, Josh Fisher, Yufang Jin): a globally-applicable ET algorithm that translates the potential ET into actual ET.  Biophsyical remote sensing parameters are used to quantify multiple stresses on plant function based on the eco-physiological theory.  
-
- - [DisALEXI] US Department of Agriculture-ARS, Martha Anderson: uses thermal satellite data based on the two-source Atmosphere-Land Exchange Inverse (ALEXI) model.  Higher resolution ET estimate is obtained through a spatial disaggregation technique using MODIS and Landsat data.
+ - [DisALEXI]  - US Department of Agriculture-ARS, Martha Anderson: uses thermal satellite data based on the two-source Atmosphere-Land Exchange Inverse (ALEXI) model.  Higher resolution ET estimate is obtained through a spatial disaggregation technique using MODIS and Landsat data.
 
 [CalSIMETAW]: https://github.com/ssj-delta-cu/ssj-calsimetaw
 [UCD-METRIC]: https://github.com/ssj-delta-cu/ssj-ucd-metric
 [ITRC]: https://github.com/ssj-delta-cu/ssj-itrc-metric
 [SIMS]: https://github.com/ssj-delta-cu/ssj-nasa-tops
 [UCD-PT]: https://github.com/ssj-delta-cu/ssj-ucd-priestley-taylor
-[JPL-PT]: https://github.com/ssj-delta-cu/ssj-jpl-pt
 [DisALEXI]: https://github.com/ssj-delta-cu/ssj-disalexi
 [DETAW]: https://github.com/ssj-delta-cu/ssj-detaw
 
@@ -29,25 +28,25 @@ In determining the consumptive use for the Delta, several research groups have b
 
 ### Final Products
 
-Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
+Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [DETAW] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
-_ET_ | M/D | M | M | M | M | M | M
+_ET_ | M/D | M | M | M | M | M/D | M
 M=Monthly; D=Daily
 
 
 ### Required Inputs
 
 
-Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
+Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [DETAW] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
-[Weather] | D | I/D | I/D |  |  |  |
-[ETo] | D | D | I/D |  |  |  |
-_ETr_ | D | I/D | I/D |  |  |  |
-[Landcover] | D |  |  |  | |  |
-[Landsat8] |  | I | I | I | I  | I | I
+[Weather] | D | I/D | I/D |  | | D | 
+[ETo] | D | D | I/D |  |  |  | 
+_ETr_ | D | I/D | I/D |  |  |  | 
+[Landcover] | D |  |  |  |  | M | 
+[Landsat8] |  | I | I | I | I  |  | I
 _MODIS_ |  |  |  |  | I  |  | I
-_GOES_ |  |  |  |  |   |  | I
-[DEM] |  | I | I | I | I | I | I
+_GOES_ |  |  |  |  |   | | I
+[DEM] |  | I | I | I | I | | I
 where M=Monthly; D=Daily
 
 [Weather]: https://github.com/ssj-delta-cu/ssj-weather
@@ -60,13 +59,13 @@ Landcover: https://github.com/ssj-delta-cu/ssj-wea
 
 ### Intermediate Data
 
-Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [JPL-PT] | [DisALEXI]
+Product | [CalSIMETAW] | [UCD-METRIC] | [ITRC] | [SIMS] | [UCD-PT] | [DETAW] | [DisALEXI]
 --- | --- | --- | --- | --- | --- | --- | ---
 _ET_ | | I | I | I | I | I | I
-_ETo_ | D/M | I | I | I | I | I | I
-_ETr_ |  | I | I |  | I | I | I
-_Kc_ | D/M | I | I | I | I | I | I
-_Kcr_ | | I | I | I |  |  |
+_ETo_ | D/M | I | I | I | I | D/M | I
+_ETr_ |  | I | I |  | I |  | I
+_Kc_ | D/M | I | I | I | I | D | I
+_Kcr_ | | I | I | I |  | |
 _Rn_ | | I | I | I |  |  |
 _G_ | | I | I | I |  |  |
 _H_ | | I | I | I |  |  |
