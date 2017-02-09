@@ -136,3 +136,7 @@ Note: Git lfs must be used when any file in the repo is > 100 mb. If everything 
 A second option if you are unable to set up git with lfs enabled is to upload the files to the project's private folder on box. Access to the upload folder is limited (@andybell, @josue-medellin, @jrmerz, @jessejanko). We will add the files to the appropriate repository.
 
 [ssj-delta-cu private folder upload](http:/ssj-delta-cu.github.io/ssj-overview/upload.html)
+
+# 2016 - Field Campaign Equipment Deployment
+
+[Field Campaign Equipment Deployment Spreadsheet](https://docs.google.com/spreadsheets/d/1roW6oTpE9N3zqmq51T5zbeRfcYPjryezxLqWY_L2SXc/edit#gid=314330290)
