@@ -137,6 +137,18 @@ A second option if you are unable to set up git with lfs enabled is to upload th
 
 [ssj-delta-cu private folder upload](http:/ssj-delta-cu.github.io/ssj-overview/upload.html)
 
+## Semantic Versioning for EE assets and tagged releases
+
+version | milestone
+ --- | ---
+v1-0-0 | inital assets from inital report (ie September 2016). Only 2015 water year.
+v1-0-1 | any changes with uploading/converting rasters
+v1-1-0 | any modifications recieved from groups
+v2-0-0 | Data received from groups near end of April 2017
+v3-0-0 | Data revisions after review
+
+
+
 # 2016 - Field Campaign Equipment Deployment
 
 [Field Campaign Equipment Deployment Spreadsheet](https://docs.google.com/spreadsheets/d/1roW6oTpE9N3zqmq51T5zbeRfcYPjryezxLqWY_L2SXc/edit#gid=314330290)
