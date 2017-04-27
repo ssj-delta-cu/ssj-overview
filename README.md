@@ -51,9 +51,8 @@ where M=Monthly; D=Daily
 
 [Weather]: https://github.com/ssj-delta-cu/ssj-weather
 [ETo]: https://github.com/ssj-delta-cu/ssj-weather
-Landcover: https://github.com/ssj-delta-cu/ssj-wea
+[Landcover]: https://github.com/ssj-delta-cu/ssj-landuse
 [Landsat8]: https://github.com/ssj-delta-cu/ssj-landsat
-[DEM]: https://github.com/ssj-delta-cu/ssj-overview/dem
 
 
 
