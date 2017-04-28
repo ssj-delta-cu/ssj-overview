@@ -120,7 +120,7 @@ interpolated).  However any resolution with an integral number of pixels in the 
 
  - 12 band geotiff raster
  - Each band representing month of the water year (Oct -> Sep)
- - Units - average daily ET (tens of mm per day)
+ - Average daily ET units in tenths of a mm per day (mm/day * 10) in order to use integer rasters. 
 
 ## Git + LFS (Preferred Option)
 
