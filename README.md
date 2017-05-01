@@ -124,7 +124,9 @@ interpolated).  However any resolution with an integral number of pixels in the 
 
 ## Git + LFS (Preferred Option)
 
-Note: Git lfs must be used when any file in the repo is > 100 mb. If everything is less than ~50 mb you can just use git to commit the files and push the changes to the appropriate repository. Git LFS is a command line extension for efficiently dealing with large files.
+Git Large File Storage (LFS) must be used when any file in the repo is > 100 mb. If everything is less than ~50 mb you can just use git to commit the files and push the changes to the appropriate repository. Git LFS is a command line extension for efficiently dealing with large files.  It replaces large files with text pointers inside Git, while storing the file contents on a github.com. Git LFS should be used for files that don't change often as each updated file counts towards the data limit for the repository.
+
+TIP: make sure to compress rasters before adding the files to git lfs. This will significantly shrink the size of the commit .
 
 1. [Set up Git LFS](https://git-lfs.github.com/)
 2. Configure git lfs to track files
@@ -132,7 +134,7 @@ Note: Git lfs must be used when any file in the repo is > 100 mb. If everything 
 
 ## Alternative option - Upload to box.com
 
-A second option if you are unable to set up git with lfs enabled is to upload the files to the project's private folder on box. Access to the upload folder is limited (@andybell, @josue-medellin, @jrmerz, @jessejanko). We will add the files to the appropriate repository.
+A second option if you are unable to set up git with lfs enabled is to upload the files to the project's private folder on box. Access to the upload folder is limited (@andybell, @josue-medellin, @jessejanko). We will add the files to the appropriate repository.
 
 [ssj-delta-cu private folder upload](http:/ssj-delta-cu.github.io/ssj-overview/upload.html)
 
@@ -143,7 +145,7 @@ version | milestone
 v1-0-0 | inital assets from inital report (ie September 2016). Only 2015 water year.
 v1-0-1 | any changes with uploading/converting rasters
 v1-1-0 | any modifications recieved from groups
-v2-0-0 | Data received from groups near end of April 2017
+v2-0-0 | Data received from groups on April 28, 2017
 v3-0-0 | Data revisions after review
 
 
