@@ -149,7 +149,3 @@ v2-0-0 | Data received from groups on April 28, 2017
 v3-0-0 | Data revisions after review
 
 
-
-# 2016 - Field Campaign Equipment Deployment
-
-[Field Campaign Equipment Deployment Spreadsheet](https://docs.google.com/spreadsheets/d/1roW6oTpE9N3zqmq51T5zbeRfcYPjryezxLqWY_L2SXc/edit#gid=314330290)
